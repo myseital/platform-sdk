@@ -3,45 +3,20 @@ package com.ydm.platform.sdk.amazon;
 import com.amazon.SellingPartnerAPIAA.AWSAuthenticationCredentials;
 import com.amazon.SellingPartnerAPIAA.AWSAuthenticationCredentialsProvider;
 import com.amazon.SellingPartnerAPIAA.LWAAuthorizationCredentials;
+import com.ydm.platform.sdk.AbsPlatformSession;
+import com.ydm.platform.sdk.AuthorizationInfo;
 import com.ydm.spapi.api.*;
 
 import java.util.UUID;
+
+import static com.ydm.platform.sdk.PlatformConstant.*;
+
 
 /**
  * @author myseital
  * @date 2022/8/11
  */
-public class AmazonSdk {
-
-    /**
-     * 亚马逊开发者keyId
-     */
-    private final String AMAZON_ACCESS_KEY_ID = "";
-    /**
-     * 亚马逊开发者秘钥
-     */
-    private final String AMAZON_SECRET_KEY = "";
-
-    /**
-     * 亚马逊角色串
-     */
-    private final String AMAZON_ROLE_ARN = "";
-
-    /**
-     * 应用客户端ID
-     */
-    private final String AMAZON_CLIENT_ID = "";
-
-    /**
-     * 客户端秘钥
-     */
-    private final String AMAZON_SECRET = "";
-
-    /**
-     * 授权接口
-     */
-    private final String AUTH_ENDPOINT = "https://api.amazon.com/auth/o2/token";
-
+public class AmazonSdk extends AbsPlatformSession {
 
     private AWSAuthenticationCredentials awsAuthenticationCredentials;
 
@@ -49,6 +24,10 @@ public class AmazonSdk {
 
     private LWAAuthorizationCredentials lwaAuthorizationCredentials;
 
+
+    public static AmazonSdk newInstance(AuthorizationInfo authorizationInfo) {
+        return new AmazonSdk(authorizationInfo.getSellingRegion(), authorizationInfo.getRefreshToken());
+    }
 
     public AmazonSdk(String region, String refreshToken) {
         awsAuthenticationCredentials = AWSAuthenticationCredentials.builder()
@@ -64,7 +43,7 @@ public class AmazonSdk {
                 .clientId(AMAZON_CLIENT_ID)
                 .clientSecret(AMAZON_SECRET)
                 .refreshToken(refreshToken)
-                .endpoint(AUTH_ENDPOINT)
+                .endpoint(AMAZON_AUTH_ENDPOINT)
                 .build();
     }
 

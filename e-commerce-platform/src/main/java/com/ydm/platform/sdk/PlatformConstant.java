@@ -24,7 +24,28 @@ public class PlatformConstant {
         }
     }
 
-    public static String QIMEN_URL = prop.getProperty("qimen.url");
-    public static String QIMEN_APPKEY = prop.getProperty("qimen.appkey");
-    public static String QIMEN_SECRET = prop.getProperty("qimen.secret");
+    /**
+     * 亚马逊开发者keyId
+     */
+    public static String AMAZON_ACCESS_KEY_ID = prop.getProperty("amazon.access.key.id");
+    /**
+     * 亚马逊开发者秘钥
+     */
+    public static String AMAZON_SECRET_KEY = prop.getProperty("amazon.secret.key");
+    /**
+     * 亚马逊角色串
+     */
+    public static String AMAZON_ROLE_ARN = prop.getProperty("amazon.role.arn");
+    /**
+     * 应用客户端ID
+     */
+    public static String AMAZON_CLIENT_ID = prop.getProperty("amazon.client.id");
+    /**
+     * 客户端秘钥
+     */
+    public static String AMAZON_SECRET = prop.getProperty("amazon.secret");
+    /**
+     * 授权接口
+     */
+    public static String AMAZON_AUTH_ENDPOINT = prop.getProperty("amazon.auth.endpoint");
 }

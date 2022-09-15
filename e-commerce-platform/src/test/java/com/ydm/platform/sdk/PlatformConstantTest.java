@@ -10,7 +10,7 @@ public class PlatformConstantTest {
 
     @Test
     public void testConstant() {
-        String qimenAppkey = PlatformConstant.QIMEN_APPKEY;
-        System.out.println(qimenAppkey);
+        String amazonSecretKey = PlatformConstant.AMAZON_SECRET_KEY;
+        System.out.println(amazonSecretKey);
     }
 }
