@@ -1,5 +1,6 @@
 package com.ydm.platform.sdk;
 
+import com.ydm.platform.sdk.amazon.AmazonAuthorizationInfo;
 import com.ydm.platform.sdk.amazon.AmazonSdk;
 import com.ydm.platform.common.enums.SourcePlatformEnum;
 
@@ -12,7 +13,7 @@ public class PlatformSessionFactory {
     public static PlatformSession create(SourcePlatformEnum sourcePlatformEnum, AuthorizationInfo authorizationInfo) {
         switch (sourcePlatformEnum) {
             case AMAZON:
-                return AmazonSdk.newInstance(authorizationInfo);
+                return AmazonSdk.newInstance((AmazonAuthorizationInfo) authorizationInfo);
             default:
                 throw new RuntimeException("不支持的平台类型");
         }

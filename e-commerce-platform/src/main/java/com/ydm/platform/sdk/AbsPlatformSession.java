@@ -2,6 +2,7 @@ package com.ydm.platform.sdk;
 
 import com.ydm.platform.online.OnlineQueryRequest;
 import com.ydm.platform.online.PageDTO;
+import com.ydm.platform.online.dto.auth.AuthInfoRequestDTO;
 import com.ydm.platform.online.dto.order.OnlineOrderDTO;
 import com.ydm.platform.online.dto.order.OnlineOrderSendRequest;
 import com.ydm.platform.online.dto.product.OnlineProductDTO;
@@ -28,12 +29,12 @@ public class AbsPlatformSession implements PlatformSession {
     }
 
     @Override
-    public AuthorizationInfo getAccessToken(TokenRequestDTO request) throws IOException {
+    public AuthorizationInfo getAccessToken(AuthInfoRequestDTO request) throws IOException {
         throw new PlatformException("接口未实现");
     }
 
     @Override
-    public AuthorizationInfo refreshToken(TokenRequestDTO request) throws IOException {
+    public AuthorizationInfo refreshToken(AuthInfoRequestDTO request) throws IOException {
         throw new PlatformException("接口未实现");
     }
 

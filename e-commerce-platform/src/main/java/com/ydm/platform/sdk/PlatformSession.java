@@ -2,6 +2,7 @@ package com.ydm.platform.sdk;
 
 import com.ydm.platform.online.OnlineQueryRequest;
 import com.ydm.platform.online.PageDTO;
+import com.ydm.platform.online.dto.auth.AuthInfoRequestDTO;
 import com.ydm.platform.online.dto.order.OnlineOrderDTO;
 import com.ydm.platform.online.dto.order.OnlineOrderSendRequest;
 import com.ydm.platform.online.dto.product.OnlineProductDTO;
@@ -33,7 +34,7 @@ public interface PlatformSession {
      * @param request 自定义参数
      * @return
      */
-    AuthorizationInfo getAccessToken(TokenRequestDTO request) throws IOException;
+    AuthorizationInfo getAccessToken(AuthInfoRequestDTO request) throws IOException;
 
     /**
      * 用户授权后获取access_token
@@ -41,7 +42,7 @@ public interface PlatformSession {
      * @return
      * @throws IOException
      */
-    AuthorizationInfo refreshToken(TokenRequestDTO request) throws IOException;
+    AuthorizationInfo refreshToken(AuthInfoRequestDTO request) throws IOException;
 
     /**
      * 批量获取平台商品信息

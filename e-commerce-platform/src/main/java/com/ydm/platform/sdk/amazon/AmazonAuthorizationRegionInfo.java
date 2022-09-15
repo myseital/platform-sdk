@@ -1,4 +1,4 @@
-package com.ydm.platform.sdk;
+package com.ydm.platform.sdk.amazon;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

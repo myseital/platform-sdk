@@ -1,4 +1,4 @@
-package com.ydm.platform.sdk;
+package com.ydm.platform.online.dto.auth;
 
 import lombok.Data;
 
@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @date 2022/9/15
  */
 @Data
-public class TokenRequestDTO implements Serializable {
+public class AuthInfoRequestDTO implements Serializable {
     private static final long serialVersionUID = 945929105701862147L;
     /**
      * 授权code
@@ -23,4 +23,9 @@ public class TokenRequestDTO implements Serializable {
      * 平台类型
      */
     private String platform;
+
+    private String key;
+    private String secret;
+    private String token;
+    private String refreshToken;
 }

@@ -24,8 +24,7 @@ public class AmazonSdk extends AbsPlatformSession {
 
     private LWAAuthorizationCredentials lwaAuthorizationCredentials;
 
-
-    public static AmazonSdk newInstance(AuthorizationInfo authorizationInfo) {
+    public static AmazonSdk newInstance(AmazonAuthorizationInfo authorizationInfo) {
         return new AmazonSdk(authorizationInfo.getSellingRegion(), authorizationInfo.getRefreshToken());
     }
 

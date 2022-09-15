@@ -1,5 +1,6 @@
 package com.ydm.platform.sdk;
 
+import com.ydm.platform.sdk.amazon.AmazonAuthorizationRegionInfo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -71,27 +72,7 @@ public class AuthorizationInfo {
     private Long expiresAt;
 
     /**
-     * 地点ID集合
-     */
-    private List<String> marketPlaceIdList;
-
-    /**
-     * 销售区域
-     */
-    private String sellingRegion;
-
-    /**
-     * 端点
-     */
-    private String endpoint;
-
-    /**
      * 站点url
      */
     private String storeUrl;
-
-    /**
-     * 亚马逊区域信息 - 所有
-     */
-    private List<AmazonAuthorizationRegionInfo> authorizationRegionList;
 }
