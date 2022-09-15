@@ -1,0 +1,31 @@
+/.settings/
+/.logs/
+/target/
+/.classpath
+/.project
+/.idea/
+*.iml
+*.log
+*.gz
+*.log*
+
+### Eclipse ###
+.classpath
+.project
+.settings
+
+### IntelliJ IDEA ###
+.idea
+
+### Maven ###
+target/
+.mvn
+
+### Gradle ###
+.gradle
+/logs/
+
+
+/e-commerce-platform/src/test/resources/
+.DS_Store
+
